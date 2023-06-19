@@ -48,6 +48,8 @@ endif()
 ## Main Library
 add_subdirectory(${CSV_SOURCE_DIR})
 
+target_include_directories(${PROJECT_NAME} PUBLIC ${CSV_INCLUDE_DIR})
+
 # build the python binding for the library 
 if (${BUILD_PYTHON})
     message("Building Python bindings for the library.")
